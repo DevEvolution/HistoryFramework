@@ -1,4 +1,5 @@
-﻿using System;
+﻿using demo.mdi.ais.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,9 @@ namespace demo.mdi.ais
 {
     static class Program
     {
+        private static ChildWindowsHistoryController controller;
+        public static ChildWindowsHistoryController Controller { get => controller; }
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +20,9 @@ namespace demo.mdi.ais
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FormMdiMain main = new FormMdiMain();
+            controller = new ChildWindowsHistoryController(main);
+            Application.Run(main);
         }
     }
 }

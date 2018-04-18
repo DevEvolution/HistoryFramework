@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace demo.mdi.ais
+namespace demo.mdi.ais.ChildForms
 {
-    public partial class Form1 : Form
+    public partial class FormWelcome : Form
     {
-        public Form1()
+        public FormWelcome()
         {
             InitializeComponent();
+        }
+
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+            Program.Controller.Open(new FormLogIn());
         }
     }
 }
