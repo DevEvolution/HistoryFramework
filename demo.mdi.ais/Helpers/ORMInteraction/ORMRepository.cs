@@ -15,6 +15,9 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
         public static ORMList Accounts { get; private set; } = new ORMList(connection, "Accounts");
         public static ORMList Salts { get; private set; } = new ORMList(connection, "Salts");
 
-
+        static ORMRepository()
+        {
+            connection.Open();
+        }
     }
 }

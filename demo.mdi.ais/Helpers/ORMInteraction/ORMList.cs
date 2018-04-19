@@ -18,7 +18,7 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
 
         public ORMList(OleDbConnection connection, string tableName)
         {
-            OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT * FROM {tableName}", connection);
+            adapter = new OleDbDataAdapter($"SELECT * FROM {tableName}", connection);
             table = new DataTable();
             adapter.Fill(table);
         }
@@ -28,6 +28,7 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
             //            item.Row = table.NewRow();
             table.Rows.Add(item.Row);
             list.Add(item);
+            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
             adapter.Update(table);
 
             table.Clear();

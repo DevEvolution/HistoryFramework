@@ -21,7 +21,7 @@ namespace demo.mdi.ais
 
         private void FormMdiMain_Load(object sender, EventArgs e)
         {
-            Program.Controller.Open(new FormWelcome());
+            Program.Controller.Open(new FormLogIn());
         }
 
         private void btnBack_Click(object sender, EventArgs e)

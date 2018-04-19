@@ -17,14 +17,9 @@ namespace demo.mdi.ais.ChildForms
             InitializeComponent();
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-            Program.Controller.Error("Дальше пока не работает");
-        }
+        private void btnLogIn_Click(object sender, EventArgs e) =>
+            //Program.Controller.Error("Дальше пока не работает");
+            Program.Controller.Open(new FormManagerAction());
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            Program.Controller.Open(new FormRegistration());
-        }
     }
 }

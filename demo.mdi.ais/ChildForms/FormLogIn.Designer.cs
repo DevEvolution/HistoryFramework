@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogIn = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,20 +116,31 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.tbPassword);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.tbLogin);
-            this.panel4.Location = new System.Drawing.Point(485, 3);
+            this.panel4.Location = new System.Drawing.Point(488, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(329, 235);
+            this.panel4.Size = new System.Drawing.Size(324, 288);
             this.panel4.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(-7, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(974, 39);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Добро пожаловать в систему! Авторизуйтесь, пожалуйста.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 13);
+            this.label2.Location = new System.Drawing.Point(3, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 39);
             this.label2.TabIndex = 0;
@@ -138,7 +149,7 @@
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbPassword.Location = new System.Drawing.Point(10, 182);
+            this.tbPassword.Location = new System.Drawing.Point(10, 235);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(305, 41);
@@ -148,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 121);
+            this.label3.Location = new System.Drawing.Point(3, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 39);
             this.label3.TabIndex = 1;
@@ -157,7 +168,7 @@
             // tbLogin
             // 
             this.tbLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(10, 67);
+            this.tbLogin.Location = new System.Drawing.Point(10, 120);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(305, 41);
             this.tbLogin.TabIndex = 1;
@@ -189,7 +200,6 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnLogIn);
-            this.panel5.Controls.Add(this.btnRegister);
             this.panel5.Location = new System.Drawing.Point(302, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(695, 101);
@@ -209,21 +219,6 @@
             this.btnLogIn.Text = "Войти";
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRegister.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRegister.Image = global::demo.mdi.ais.Properties.Resources.registeruser;
-            this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegister.Location = new System.Drawing.Point(348, 3);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(339, 89);
-            this.btnRegister.TabIndex = 4;
-            this.btnRegister.Text = "Регистрация";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // FormLogIn
             // 
@@ -266,6 +261,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogIn;
-        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -32,10 +32,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbSearch = new System.Windows.Forms.ToolStripTextBox();
             this.btnBack = new System.Windows.Forms.ToolStripButton();
             this.btnForward = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,26 +63,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBack,
             this.btnForward,
-            this.toolStripSeparator1,
-            this.tbSearch});
+            this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1103, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1103, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tbSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(150, 27);
-            this.tbSearch.Text = "Поиск";
             // 
             // btnBack
             // 
@@ -91,7 +76,7 @@
             this.btnBack.Image = global::demo.mdi.ais.Properties.Resources.btnprev;
             this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(23, 24);
+            this.btnBack.Size = new System.Drawing.Size(23, 22);
             this.btnBack.Text = "Назад";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -101,9 +86,14 @@
             this.btnForward.Image = global::demo.mdi.ais.Properties.Resources.btnnext;
             this.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(23, 24);
+            this.btnForward.Size = new System.Drawing.Size(23, 22);
             this.btnForward.Text = "Вперед";
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // FormMdiMain
             // 
@@ -134,7 +124,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox tbSearch;
         public System.Windows.Forms.ToolStripButton btnBack;
         public System.Windows.Forms.ToolStripButton btnForward;
         public System.Windows.Forms.ToolStripStatusLabel lblStatus;
