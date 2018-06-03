@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="RouteScheme" table="[Схемы маршрутов]" dynamic-update="true" >
+    <cache usage="read-write"/>
+    <composite-id>
+      <key-property column="[№ Маршрута]" type="int" name="RouteNumber" />
+      <key-property column="[№ участка пути]" type = "int" name = "RouteSectorNumber" />
+    </composite-id>
+    <property column="[№ Начальной ТТ]" type = "int" name = "StartPointNumber" />
+    <property column="[№ Конечной ТТ]" type = "int" name = "EndPointNumber" />
+  </class>
+</hibernate-mapping>

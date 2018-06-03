@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="Route" table="[Маршруты]" dynamic-update="true" >
+    <cache usage="read-write"/>
+    
+    <id column="[№ Маршрута]" type="int" name="RouteNumber" />
+    <property column="[№ Машины]" type = "int" name = "CarNumber" />
+    <property column="[Дата выхода машины]" type = "datetime" name = "CarDepartureDate" />
+    <property column="[Количество переходов]" type = "string" name = "ConversionsNumber" />
+    
+    <many-to-one name="Car" class="Car" column="[№ Машины]" cascade = "save-update" />
+  </class>
+</hibernate-mapping>

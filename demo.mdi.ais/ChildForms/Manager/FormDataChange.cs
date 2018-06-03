@@ -21,14 +21,19 @@ namespace demo.mdi.ais.ChildForms.Manager
             this.tableToChange = tableToChange;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Program.Controller.Open(new FormUpdateDelete(TableAction.Update, tableToChange));
+            Program.Controller.OpenDialog(new FormUpdateDelete(TableAction.Update, tableToChange));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Program.Controller.Open(new FormUpdateDelete(TableAction.Delete, tableToChange));
+            Program.Controller.OpenDialog(new FormUpdateDelete(TableAction.Delete, tableToChange));
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Program.Controller.OpenDialog(new FormAdd(tableToChange));
         }
     }
 }

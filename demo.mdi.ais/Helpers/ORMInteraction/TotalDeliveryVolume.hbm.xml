@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="TotalDeliveryVolume" table="[Итоговые объёмы поставки]" dynamic-update="true" >
+    <cache usage="read-write"/>
+    
+    <composite-id>
+      <key-property column="[№ Района]" type="int" name="DistrictNumber" />
+      <key-property column="[Граничная дата поставки]" type="datetime" name="BorderDeliveryDate" />
+    </composite-id>
+    <property column="[Итоговый вес]" type="double" name="TotalWeight" />
+    <property column="[Итоговый объём]" type="double" name="TotalVolume" />
+    
+    <!--<many-to-one name="District" class="District" cascade="save-update" />-->
+  </class>
+</hibernate-mapping>

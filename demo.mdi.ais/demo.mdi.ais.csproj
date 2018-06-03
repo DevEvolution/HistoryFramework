@@ -35,9 +35,42 @@
     <ApplicationIcon>cat.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.1.2\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.JetDriver, Version=2.0.0.1002, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.JetDriver.2.0.0.1002\lib\net40\NHibernate.JetDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Linq, Version=1.1.0.1001, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Linq.1.0\lib\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +93,30 @@
     </Compile>
     <Compile Include="ChildForms\FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormCapacity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormCapacity.Designer.cs">
+      <DependentUpon>FormCapacity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormPathfinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormPathfinding.Designer.cs">
+      <DependentUpon>FormPathfinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Logist\FormRequest.Designer.cs">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Manager\FormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Manager\FormAdd.Designer.cs">
+      <DependentUpon>FormAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Manager\FormDataChange.cs">
       <SubType>Form</SubType>
@@ -86,15 +143,46 @@
       <DependentUpon>FormUpdateDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ChildWindowsHistoryController.cs" />
+    <Compile Include="Helpers\Account.cs" />
+    <Compile Include="Helpers\Authorization.cs" />
     <Compile Include="Helpers\Cryptography\Hashes.cs" />
+    <Compile Include="Helpers\Enums\AccountType.cs" />
+    <Compile Include="Helpers\Enums\SettingsTableDataType.cs" />
     <Compile Include="Helpers\Enums\TableAction.cs" />
     <Compile Include="Helpers\Enums\TableToChange.cs" />
     <Compile Include="Helpers\Interfaces\IChildWindowController.cs" />
+    <Compile Include="Helpers\Interfaces\IRepository.cs" />
     <Compile Include="Helpers\Interfaces\ORMBaseModel.cs" />
-    <Compile Include="Helpers\ORMInteraction\Models\AccountModel.cs" />
-    <Compile Include="Helpers\ORMInteraction\Models\SaltModel.cs" />
-    <Compile Include="Helpers\ORMInteraction\ORMList.cs" />
-    <Compile Include="Helpers\ORMInteraction\ORMRepository.cs" />
+    <Compile Include="Helpers\ORMInteraction\Car.cs" />
+    <Compile Include="Helpers\ORMInteraction\DistanceBetweenSalesPoints.cs" />
+    <Compile Include="Helpers\ORMInteraction\District.cs" />
+    <Compile Include="Helpers\ORMInteraction\Goods.cs" />
+    <Compile Include="Helpers\ORMInteraction\Loading.cs" />
+    <Compile Include="Helpers\ORMInteraction\Request.cs" />
+    <Compile Include="Helpers\ORMInteraction\RequestVolume.cs" />
+    <Compile Include="Helpers\ORMInteraction\Route.cs" />
+    <Compile Include="Helpers\ORMInteraction\RouteScheme.cs" />
+    <Compile Include="Helpers\ORMInteraction\SalesPoint.cs" />
+    <Compile Include="Helpers\ORMInteraction\TotalDeliveryVolume.cs" />
+    <Compile Include="Helpers\Repository.cs" />
+    <Compile Include="Helpers\SettingsTableRowFilter.cs" />
+    <Compile Include="MathLayer\FWAlgorithm.cs" />
+    <Compile Include="MathLayer\FWPathfinder.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="SettingsTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsTable.Designer.cs">
+      <DependentUpon>SettingsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsTableRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsTableRowControl.Designer.cs">
+      <DependentUpon>SettingsTableRowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SettingsTableDynamicList.cs" />
+    <Compile Include="Helpers\SettingsTableRow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForms\FormMdiMain.resx">
@@ -102,6 +190,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Logist\FormCapacity.resx">
+      <DependentUpon>FormCapacity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Logist\FormPathfinding.resx">
+      <DependentUpon>FormPathfinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Logist\FormRequest.resx">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Manager\FormAdd.resx">
+      <DependentUpon>FormAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Manager\FormDataChange.resx">
       <DependentUpon>FormDataChange.cs</DependentUpon>
@@ -115,6 +215,12 @@
     <EmbeddedResource Include="ChildForms\Manager\FormUpdateDelete.resx">
       <DependentUpon>FormUpdateDelete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsTable.resx">
+      <DependentUpon>SettingsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsTableRowControl.resx">
+      <DependentUpon>SettingsTableRowControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -125,6 +231,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\district-dynamicList.json" />
+    <None Include="Resources\distance-dynamicList.json" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,10 +249,59 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ais.db.accdb">
+    <Content Include="cat.ico" />
+    <Content Include="БД_КР_ОПАИС-Буйнова-4307--11.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="cat.ico" />
+    <None Include="Resources\litrum.png" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\Car.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\District.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\SalesPoint.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\ORMInteraction\Route.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\RequestVolume.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\DistanceBetweenSalesPoints.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\RouteScheme.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\Goods.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\ORMInteraction\TotalDeliveryVolume.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\Request.hbm.xml" />
+    <EmbeddedResource Include="Helpers\ORMInteraction\Loading.hbm.xml" />
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\xsettings.ico" />
+    <None Include="Resources\user.ico" />
+    <None Include="Resources\strategy.ico" />
+    <None Include="Resources\startup.ico" />
+    <None Include="Resources\registeruser.ico" />
+    <None Include="Resources\pie-chart.ico" />
+    <None Include="Resources\networking.ico" />
+    <None Include="Resources\list.ico" />
+    <None Include="Resources\like.ico" />
+    <None Include="Resources\handshake.ico" />
+    <None Include="Resources\group64.ico" />
+    <None Include="Resources\correctuser.ico" />
+    <None Include="Resources\computer.ico" />
+    <None Include="Resources\compass.ico" />
+    <None Include="Resources\binoculars.ico" />
+    <None Include="Resources\bar-chart.ico" />
+    <None Include="Resources\kailogo.png" />
+    <None Include="Resources\next64.png" />
+    <None Include="Resources\back64.png" />
+    <None Include="Resources\startup.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\compass.png" />
+    <None Include="Resources\xsettings.png" />
+    <None Include="Resources\binoculars.png" />
+    <None Include="Resources\bar-chart.png" />
+    <None Include="Resources\strategy.png" />
+    <None Include="Resources\networking.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\computer.png" />
     <None Include="Resources\handshake.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\registeruser.png" />
@@ -156,7 +315,7 @@
     <None Include="Resources\bigcat512.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ChildForms\Logist\" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

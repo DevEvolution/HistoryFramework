@@ -18,14 +18,14 @@ namespace demo.mdi.ais.ChildForms
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChange_Click(object sender, EventArgs e)
         {
             Program.Controller.Open(new FormTableChoice());
+        }
+
+        private void btnBuildDocumentation_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

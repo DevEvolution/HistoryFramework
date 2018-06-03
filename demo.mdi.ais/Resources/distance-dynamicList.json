@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "name": "№ начальной ТТ",
+      "dataType": 1,
+      "format": "NN,>1",
+      "defaultValue": "1"
+    },
+    {
+      "name": "№ конечной ТТ",
+      "dataType": 1,
+      "format": "NN,>1",
+      "defaultValue": "1"
+    },
+    {
+      "name": "№ района",
+      "dataType": 1,
+      "format": "NN,>1",
+      "defaultValue": "1"
+    },
+    {
+      "name": "Расстояние между ТТ",
+      "dataType": 1,
+      "format": "NN,>0",
+      "defaultValue": "0"
+    },
+    {
+      "name": "Информация о пути",
+      "dataType": 0,
+      "format": "",
+      "defaultValue": ""
+    }
+  ]
+}

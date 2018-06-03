@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="Goods" table="[Товары]" dynamic-update="true" >
+    <cache usage="read-write" />
+    
+    <id column="[№ Товара]" type="int" name="GoodsNumber" />
+    <property column="[Наименование]" type = "string" name = "Name" />
+    <property column="[Единица поставки]" type = "string" name = "DeliveryUnit" />
+    <property column="[Объём единицы поставки]" type = "double" name = "DeliveryUnitVolume" />
+    <property column="[Вес единицы поставки]" type = "double" name = "DeliveryUnitWeight" />
+    <property column="[Наличие на складе]" type = "int" name = "AvialabilityInStock" />
+    
+    <set name ="Requests" lazy="true">
+      <key column ="[№ Товара]"/>
+      <one-to-many class ="Goods"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -18,14 +18,14 @@ namespace demo.mdi.ais.ChildForms.Manager
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Program.Controller.Open(new FormDataChange(TableToChange.Distance));
-        }
-
         private void btnDistricts_Click(object sender, EventArgs e)
         {
-            Program.Controller.Open(new FormDataChange(TableToChange.District));
+            Program.Controller.OpenDialog(new FormDataChange(TableToChange.District));
+        }
+
+        private void btnDistances_Click(object sender, EventArgs e)
+        {
+            Program.Controller.OpenDialog(new FormDataChange(TableToChange.Distance));
         }
     }
 }

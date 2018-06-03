@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="SalesPoint" table="[Торговые точки]" dynamic-update="true" >
+    <cache usage="read-write"/>
+    
+    <id column="[№ ТТ]" type="int" name="SalesPointNumber"></id>
+    <property column="[№ Района]" type = "int" name = "DistrictNumber" />
+    <property column="[Адрес ТТ]" type = "string" name = "Address" />
+    
+    <many-to-one name="District" class="District" column="[№ Района]" cascade = "save-update" />
+    <set name ="Requests" lazy="true">
+      <key column ="[№ ТТ]"/>
+      <one-to-many class ="SalesPoint"/>
+    </set>
+    <set name ="DistanceBetweenSalesPoints" lazy="true">
+      <key column ="[№ ТТ]"/>
+      <one-to-many class ="SalesPoint"/>
+    </set>
+  </class>
+</hibernate-mapping>

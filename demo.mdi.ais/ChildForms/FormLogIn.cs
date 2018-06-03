@@ -1,8 +1,12 @@
-﻿using System;
+﻿using demo.mdi.ais.ChildForms.Logist;
+using demo.mdi.ais.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +21,15 @@ namespace demo.mdi.ais.ChildForms
             InitializeComponent();
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e) =>
-            //Program.Controller.Error("Дальше пока не работает");
-            Program.Controller.Open(new FormManagerAction());
-
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            Authorization auth = new Authorization();
+            Account account = auth.Authorize(tbLogin.Text, tbPassword.Text);
+            if (account == null) Program.Controller.Error("Не удалось авторизоваться");
+            else if (account.accountType == Helpers.Enums.AccountType.Logist)
+                Program.Controller.Open(new FormRequest());
+            else if (account.accountType == Helpers.Enums.AccountType.Manager)
+                Program.Controller.Open(new FormManagerAction());
+        }
     }
 }

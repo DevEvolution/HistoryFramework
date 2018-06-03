@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" ?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.JetDriver.JetDialect, NHibernate.JetDriver</property>
+    <property name="connection.driver_class">NHibernate.JetDriver.JetDriver, NHibernate.JetDriver</property>
+    <property name="connection.connection_string">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=БД_КР_ОПАИС-Буйнова-4307--11.mdb</property>
+  </session-factory>
+</hibernate-configuration>

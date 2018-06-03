@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "name": "№ Района",
+      "dataType": 1,
+      "format": "NN,>1",
+      "defaultValue": "1"
+    },
+    {
+      "name": "Название ",
+      "dataType": 0,
+      "format": "NN,>1,<80",
+      "defaultValue": "1"
+    },
+    {
+      "name": "Количество обслуживаемых ТТ",
+      "dataType": 1,
+      "format": "NN,>1",
+      "defaultValue": "1"
+    }
+  ]
+}

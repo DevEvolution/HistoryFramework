@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="demo.mdi.ais" namespace="demo.mdi.ais.Helpers.ORMInteraction">
+  <class name="Car" table="[Автопарк]" dynamic-update="true" >
+    <cache usage="read-write"/>
+    
+    <id column="[№ машины в автопарке]" type="int" name="CarNumber" />
+    <property column="[Тип машины]" type="string" name="CarType" />
+    <property column="[ФИО водителя]" type = "string" name = "DriverName" />
+    <property column="[ФИО экспедитора]" type = "string" name = "ExpeditorName" />
+    <property column="[Рекомендуемый объём загрузки]" type="int" name="RecommendedLoadingVolume" />
+    <property column="[Рекомендуемый тоннаж загрузки]" type="int" name="RecommendedTonnageOfLoading" />
+    <property column="[Статус машины]" type="string" name="CarStatus" />
+    <property column="[Характеристики]" type="string" name="Specifications" />
+    
+    <set name ="Routes" lazy="true">
+      <key column ="[№ машины в автопарке]"/>
+      <one-to-many class ="Car"/>
+    </set>
+  </class>
+</hibernate-mapping>
