@@ -7,14 +7,14 @@
     <property column="Название" type = "string" name = "Name" />
     <property column="[Количество обслуживаемых ТТ]" type="int" name="SalesPointCount" />
     
-    <set name ="SalesPoints" lazy="true">
+    <!--<set name ="SalesPoints" lazy="true">
       <key column ="[№ Района]"/>
       <one-to-many class ="District"/>
     </set>
     <set name ="DistanceBetweenSalesPoints" lazy="true">
       <key column ="[№ Района]"/>
       <one-to-many class ="District"/>
-    </set>
+    </set>-->
     <!--<set name ="TotalDeliveryVolumes" lazy="true">
       <key column ="[№ Района]"/>
       <one-to-many class ="District"/>

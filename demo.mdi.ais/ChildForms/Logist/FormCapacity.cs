@@ -160,7 +160,7 @@ namespace demo.mdi.ais.ChildForms.Logist
                 }
                 if (allCount) btnFinal.Visible = true;
 
-                Program.Controller.Open(new FormPathfinding(req));
+                Program.Controller.Open(new FormPathfinding(req, allCount));
             }
 
         }

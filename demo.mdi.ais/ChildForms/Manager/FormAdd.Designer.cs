@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            demo.mdi.ais.Helpers.SettingsTableDynamicList settingsTableDynamicList1 = new demo.mdi.ais.Helpers.SettingsTableDynamicList();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdd));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.settingsTable = new demo.mdi.ais.SettingsTable();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +65,21 @@
             this.panel1.Size = new System.Drawing.Size(253, 94);
             this.panel1.TabIndex = 0;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAdd.Image = global::demo.mdi.ais.Properties.Resources.pencil;
+            this.btnAdd.Location = new System.Drawing.Point(6, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(244, 88);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Добавить строку";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
@@ -88,23 +104,10 @@
             this.panel2.Size = new System.Drawing.Size(520, 512);
             this.panel2.TabIndex = 0;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnAdd.Image = global::demo.mdi.ais.Properties.Resources.pencil;
-            this.btnAdd.Location = new System.Drawing.Point(6, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(244, 88);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Добавить строку";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
             // settingsTable
             // 
             this.settingsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingsTable.DynamicList = settingsTableDynamicList1;
             this.settingsTable.Location = new System.Drawing.Point(0, 0);
             this.settingsTable.Margin = new System.Windows.Forms.Padding(5);
             this.settingsTable.Name = "settingsTable";

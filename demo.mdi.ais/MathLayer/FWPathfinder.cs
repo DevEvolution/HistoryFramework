@@ -12,13 +12,18 @@ namespace demo.mdi.ais.MathLayer
         private bool[,] ZMatrix;
         public List<int> Path { get => fullRound; }
         private List<int> fullRound = new List<int>();
+        //private List<(int,bool)> needList;
+        private List<int> needList;
         public int Distance { get; private set; }
 
-        public FWPathfinder(FWAlgorithm floydResults)
+        public FWPathfinder(FWAlgorithm floydResults, List<int> needList)
         {
             floyd = floydResults;
             ZMatrix = new bool[floyd.Size, floyd.Size];
             ZMatrix[0, 0] = true;
+            this.needList = needList;
+            //foreach (int point in needList)
+            //    this.needList.Add((point, false));
             CalculateRoute();
         }
 
@@ -45,7 +50,7 @@ namespace demo.mdi.ais.MathLayer
             for (int i = 0; i < floyd.Size; i++)
             {
                 int toPoint = i;
-                if (!ZMatrix[fromPoint, toPoint] && !fullRound.Contains(toPoint) && floyd[fromPoint, toPoint].distance < minimumDistancePoint.distance)
+                if (needList.Contains(toPoint) && !ZMatrix[fromPoint, toPoint] && !fullRound.Contains(toPoint) && floyd[fromPoint, toPoint].distance < minimumDistancePoint.distance)
                 {
                     minimumDistancePoint = (toPoint, floyd[fromPoint, toPoint].distance);
                 }

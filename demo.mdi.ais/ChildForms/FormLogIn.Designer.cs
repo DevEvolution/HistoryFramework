@@ -34,9 +34,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.MaskedTextBox();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -105,14 +105,13 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Логин";
             // 
-            // tbPassword
+            // tbLogin
             // 
-            this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbPassword.Location = new System.Drawing.Point(3, 264);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(305, 41);
-            this.tbPassword.TabIndex = 7;
+            this.tbLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLogin.Location = new System.Drawing.Point(3, 178);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(305, 41);
+            this.tbLogin.TabIndex = 6;
             // 
             // label3
             // 
@@ -124,13 +123,16 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Пароль";
             // 
-            // tbLogin
+            // tbPassword
             // 
-            this.tbLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(3, 178);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(305, 41);
-            this.tbLogin.TabIndex = 6;
+            this.tbPassword.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPassword.Location = new System.Drawing.Point(3, 264);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(305, 41);
+            this.tbPassword.TabIndex = 7;
+            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyDown);
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // btnLogIn
             // 

@@ -1,4 +1,5 @@
 ﻿using demo.mdi.ais.ChildForms.Manager;
+using demo.mdi.ais.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace demo.mdi.ais.ChildForms
         public FormManagerAction()
         {
             InitializeComponent();
+            Program.Controller.Message($"Добро пожаловать, {Authorization.AuthorizedAccount.login}");
         }
 
         private void btnChange_Click(object sender, EventArgs e)

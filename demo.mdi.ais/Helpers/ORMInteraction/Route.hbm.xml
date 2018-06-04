@@ -6,8 +6,8 @@
     <id column="[№ Маршрута]" type="int" name="RouteNumber" />
     <property column="[№ Машины]" type = "int" name = "CarNumber" />
     <property column="[Дата выхода машины]" type = "datetime" name = "CarDepartureDate" />
-    <property column="[Количество переходов]" type = "string" name = "ConversionsNumber" />
+    <property column="[Количество переходов]" type = "int" name = "ConversionsNumber" />
     
-    <many-to-one name="Car" class="Car" column="[№ Машины]" cascade = "save-update" />
+    <!--<many-to-one name="Car" class="Car" column="[№ Машины]" cascade = "save-update" />-->
   </class>
 </hibernate-mapping>

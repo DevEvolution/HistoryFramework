@@ -3,20 +3,20 @@
     {
       "name": "№ Района",
       "dataType": 1,
-      "format": "NN,>1",
-      "defaultValue": "1"
+      "format": "NN,>0",
+      "defaultValue": "0"
     },
     {
-      "name": "Название ",
+      "name": "Название",
       "dataType": 0,
-      "format": "NN,>1,<80",
-      "defaultValue": "1"
+      "format": "NN,>0,<80",
+      "defaultValue": "0"
     },
     {
       "name": "Количество обслуживаемых ТТ",
       "dataType": 1,
-      "format": "NN,>1",
-      "defaultValue": "1"
+      "format": "NN,>0",
+      "defaultValue": "0"
     }
   ]
 }

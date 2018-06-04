@@ -31,5 +31,16 @@ namespace demo.mdi.ais.ChildForms
             else if (account.accountType == Helpers.Enums.AccountType.Manager)
                 Program.Controller.Open(new FormManagerAction());
         }
+
+        private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void tbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Return)
+                btnLogIn_Click(this, new EventArgs());
+        }
     }
 }

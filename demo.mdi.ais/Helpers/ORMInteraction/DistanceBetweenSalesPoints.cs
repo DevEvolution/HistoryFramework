@@ -14,19 +14,19 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
         public virtual int Distance { get; set; }
         public virtual string InformationAboutPath { get; set; }
 
-        public virtual SalesPoint StartSalesPoint { get; set; }
-        public virtual SalesPoint EndSalesPoint { get; set; }
-        public virtual District District { get; set; }
+        //public virtual SalesPoint StartSalesPoint { get; set; }
+        //public virtual SalesPoint EndSalesPoint { get; set; }
+        //public virtual District District { get; set; }
 
         public override bool Equals(object obj)
         {
             var points = obj as DistanceBetweenSalesPoints;
             return points != null &&
                    StartSalesPointNumber == points.StartSalesPointNumber &&
-                   EndSalesPointNumber == points.EndSalesPointNumber &&
-                   DistrictNumber == points.DistrictNumber &&
-                   Distance == points.Distance &&
-                   InformationAboutPath == points.InformationAboutPath;
+                   EndSalesPointNumber == points.EndSalesPointNumber;// &&
+                   //DistrictNumber == points.DistrictNumber &&
+                   //Distance == points.Distance &&
+                   //InformationAboutPath == points.InformationAboutPath;
         }
 
         public override int GetHashCode()
@@ -34,9 +34,9 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
             var hashCode = 1885387658;
             hashCode = hashCode * -1521134295 + StartSalesPointNumber.GetHashCode();
             hashCode = hashCode * -1521134295 + EndSalesPointNumber.GetHashCode();
-            hashCode = hashCode * -1521134295 + DistrictNumber.GetHashCode();
-            hashCode = hashCode * -1521134295 + Distance.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(InformationAboutPath);
+            //hashCode = hashCode * -1521134295 + DistrictNumber.GetHashCode();
+            //hashCode = hashCode * -1521134295 + Distance.GetHashCode();
+            //hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(InformationAboutPath);
             return hashCode;
         }
     }

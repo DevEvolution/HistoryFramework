@@ -10,8 +10,8 @@ namespace demo.mdi.ais.Helpers.ORMInteraction
     {
         public virtual int RouteNumber { get; set; }
         public virtual int CarNumber { get; set; }
-        public virtual Car Car { get; set; }
+        //public virtual Car Car { get; set; }
         public virtual DateTime CarDepartureDate { get; set; }
-        public virtual string ConversionsNumber { get; set; }
+        public virtual int ConversionsNumber { get; set; }
     }
 }

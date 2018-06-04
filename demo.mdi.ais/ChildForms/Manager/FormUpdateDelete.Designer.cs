@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            demo.mdi.ais.Helpers.SettingsTableDynamicList settingsTableDynamicList3 = new demo.mdi.ais.Helpers.SettingsTableDynamicList();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpdateDelete));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.settingsTable = new demo.mdi.ais.SettingsTable();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnUpdateDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnUpdateDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,35 +68,47 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.settingsTable);
-            this.panel1.Controls.Add(this.dgvData);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(154, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(989, 623);
             this.panel1.TabIndex = 0;
             // 
-            // settingsTable
+            // panel4
             // 
-            this.settingsTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.settingsTable.Dock = System.Windows.Forms.DockStyle.Left;
-            this.settingsTable.DynamicList = settingsTableDynamicList3;
-            this.settingsTable.Location = new System.Drawing.Point(0, 24);
-            this.settingsTable.Name = "settingsTable";
-            this.settingsTable.Padding = new System.Windows.Forms.Padding(10);
-            this.settingsTable.Size = new System.Drawing.Size(419, 599);
-            this.settingsTable.TabIndex = 0;
+            this.panel4.Controls.Add(this.dgvData);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(392, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(597, 623);
+            this.panel4.TabIndex = 1;
             // 
             // dgvData
             // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvData.Location = new System.Drawing.Point(417, 24);
+            this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvData.Location = new System.Drawing.Point(0, 0);
             this.dgvData.Margin = new System.Windows.Forms.Padding(30);
             this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(572, 599);
-            this.dgvData.TabIndex = 8;
+            this.dgvData.ReadOnly = true;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dgvData.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvData.Size = new System.Drawing.Size(597, 623);
+            this.dgvData.TabIndex = 10;
+            this.dgvData.SelectionChanged += new System.EventHandler(this.dgvData_SelectionChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(392, 623);
+            this.panel3.TabIndex = 0;
             // 
             // label1
             // 
@@ -103,35 +118,8 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 24);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Введите известные данные:";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Image = global::demo.mdi.ais.Properties.Resources.list;
-            this.button1.Location = new System.Drawing.Point(3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 82);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Поиск";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateDelete
-            // 
-            this.btnUpdateDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateDelete.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdateDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnUpdateDelete.Image = global::demo.mdi.ais.Properties.Resources.like;
-            this.btnUpdateDelete.Location = new System.Drawing.Point(440, 6);
-            this.btnUpdateDelete.Name = "btnUpdateDelete";
-            this.btnUpdateDelete.Size = new System.Drawing.Size(351, 80);
-            this.btnUpdateDelete.TabIndex = 6;
-            this.btnUpdateDelete.Text = "Сохранить изменения или удалить";
-            this.btnUpdateDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdateDelete.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -150,12 +138,41 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.btnUpdateDelete);
             this.panel2.Location = new System.Drawing.Point(267, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(796, 94);
             this.panel2.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearch.Image = global::demo.mdi.ais.Properties.Resources.list;
+            this.btnSearch.Location = new System.Drawing.Point(3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(265, 82);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Поиск";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnUpdateDelete
+            // 
+            this.btnUpdateDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateDelete.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnUpdateDelete.Image = global::demo.mdi.ais.Properties.Resources.like;
+            this.btnUpdateDelete.Location = new System.Drawing.Point(440, 6);
+            this.btnUpdateDelete.Name = "btnUpdateDelete";
+            this.btnUpdateDelete.Size = new System.Drawing.Size(351, 80);
+            this.btnUpdateDelete.TabIndex = 6;
+            this.btnUpdateDelete.Text = "Сохранить изменения или удалить";
+            this.btnUpdateDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateDelete.UseVisualStyleBackColor = true;
+            this.btnUpdateDelete.Click += new System.EventHandler(this.btnUpdateDelete_Click);
             // 
             // dataGridView1
             // 
@@ -182,8 +199,10 @@
             this.Load += new System.EventHandler(this.FormUpdateDelete_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,13 +214,14 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvData;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnUpdateDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private SettingsTable settingsTable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
     }
 }

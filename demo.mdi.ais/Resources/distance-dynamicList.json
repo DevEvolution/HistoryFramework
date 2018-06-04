@@ -3,20 +3,20 @@
     {
       "name": "№ начальной ТТ",
       "dataType": 1,
-      "format": "NN,>1",
-      "defaultValue": "1"
+      "format": "NN,>0",
+      "defaultValue": "0"
     },
     {
       "name": "№ конечной ТТ",
       "dataType": 1,
-      "format": "NN,>1",
-      "defaultValue": "1"
+      "format": "NN,>0",
+      "defaultValue": "0"
     },
     {
       "name": "№ района",
       "dataType": 1,
-      "format": "NN,>1",
-      "defaultValue": "1"
+      "format": "NN,>0",
+      "defaultValue": "0"
     },
     {
       "name": "Расстояние между ТТ",

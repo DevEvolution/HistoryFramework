@@ -29,6 +29,11 @@ namespace demo.mdi.ais
             }
         }
 
+        public string GetValue(string key)
+        {
+            return Rows.FirstOrDefault(x => x.Question == key)?.Value ?? String.Empty;
+        }
+
         public SettingsTable()
         {
             InitializeComponent();
