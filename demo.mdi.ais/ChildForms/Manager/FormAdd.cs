@@ -14,8 +14,6 @@ using System.Windows.Forms;
 
 namespace demo.mdi.ais.ChildForms.Manager
 {
-    //при добавлении новой строки проверка по №района/№нач-й и кон-й ТТ, есть ли такие в БД
-
     public partial class FormAdd : Form
     {
         TableToChange table;
@@ -24,6 +22,7 @@ namespace demo.mdi.ais.ChildForms.Manager
         {
             table = tableToChange;
             InitializeComponent();
+            Program.Controller.Message("Введите данные для добавления");
         }
 
         private void FormAdd_Load(object sender, EventArgs e)
@@ -59,6 +58,11 @@ namespace demo.mdi.ais.ChildForms.Manager
                             Distance = int.Parse(settingsTable.GetValue("Расстояние между ТТ")),
                             InformationAboutPath = settingsTable.GetValue("Информация о пути")
                         };
+                        if (new Repository<District>(NHibernateHelper.OpenSession()).All().ToList().FirstOrDefault(x => x.DistrictNumber == distance.DistrictNumber) == null)
+                        {
+                            Program.Controller.Error("Района с таким номером не существует.");
+                            return;
+                        }
                         Repository<DistanceBetweenSalesPoints> repository = new Repository<DistanceBetweenSalesPoints>(NHibernateHelper.OpenSession());
                         if (repository.All().ToList().FirstOrDefault(x => x.StartSalesPointNumber == distance.StartSalesPointNumber && x.EndSalesPointNumber == distance.EndSalesPointNumber) == null)
                         {
@@ -66,7 +70,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                             Program.Controller.Message("Запись успешно добавлена");
                         }
                         else
-                            Program.Controller.Error("Такая запись уже существует!");
+                            Program.Controller.Error("Запись с таким идентификатором уже существует!");
                     }
                     break;
                 case TableToChange.District:
@@ -87,7 +91,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                             Program.Controller.Message("Запись успешно добавлена");
                         }
                         else
-                            Program.Controller.Error("Такая запись уже существует!");
+                            Program.Controller.Error("Запись с таким идентификатором уже существует!");
                     }
                     break;
             }

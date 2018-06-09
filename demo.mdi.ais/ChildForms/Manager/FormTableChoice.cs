@@ -16,6 +16,7 @@ namespace demo.mdi.ais.ChildForms.Manager
         public FormTableChoice()
         {
             InitializeComponent();
+            Program.Controller.Message("Выберите таблицу");
         }
 
         private void btnDistricts_Click(object sender, EventArgs e)

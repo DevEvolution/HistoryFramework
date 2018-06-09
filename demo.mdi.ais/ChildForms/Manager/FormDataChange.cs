@@ -19,6 +19,7 @@ namespace demo.mdi.ais.ChildForms.Manager
         {
             InitializeComponent();
             this.tableToChange = tableToChange;
+            Program.Controller.Message("Выберите необходимую функцию");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

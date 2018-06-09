@@ -15,7 +15,7 @@
     {
       "name": "№ района",
       "dataType": 1,
-      "format": "NN,>0",
+      "format": "NN,>0,<50",
       "defaultValue": "0"
     },
     {

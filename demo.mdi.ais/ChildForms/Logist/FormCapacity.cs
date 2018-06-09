@@ -43,10 +43,9 @@ namespace demo.mdi.ais.ChildForms.Logist
             {
                 DataGridViewButtonCell button = row.Cells[3] as DataGridViewButtonCell;
                 button.Value = "Рассчитать";
-
-                //button.FlatStyle = FlatStyle.Flat;
-                //button.Style.ForeColor = Color.CornflowerBlue;
             }
+
+            Program.Controller.Message("Выполните рассчеты комплектации машин");
         }
 
         private void FormCapacity_Load(object sender, EventArgs e)

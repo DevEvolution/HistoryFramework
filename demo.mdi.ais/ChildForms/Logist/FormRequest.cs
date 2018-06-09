@@ -30,6 +30,8 @@ namespace demo.mdi.ais.ChildForms.Logist
             dgvRequest.Rows.Clear();
             foreach (Request request in new Repository<Request>(NHibernateHelper.OpenSession()).All().Where(x => x.RequestStatus == "активна" && x.BorderDeliveryDate <= datePickerBorderDate.Value))
                 dgvRequest.Rows.Add(true, request.RequestNumber, request.SalesPointNumber, request.ShipmentNumber, request.BorderDeliveryDate.ToShortDateString(), request.Count);
+
+            Program.Controller.Message("Отметьте все необходимые заявки");
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)

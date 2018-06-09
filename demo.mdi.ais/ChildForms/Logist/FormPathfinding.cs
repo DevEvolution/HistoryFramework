@@ -33,6 +33,8 @@ namespace demo.mdi.ais.ChildForms.Logist
             _requests = requests;
             finalPoint = final;
             Calculate();
+            Program.Controller.Message("Построение маршрута завершено");
+
         }
 
         private void FormPathfinding_Load(object sender, EventArgs e)
@@ -74,7 +76,6 @@ namespace demo.mdi.ais.ChildForms.Logist
             Repository<DistanceBetweenSalesPoints> distances = new Repository<DistanceBetweenSalesPoints>(NHibernateHelper.OpenSession());
             var allDistancePoints = distances.All().ToList();
             fullMapping = new Repository<SalesPoint>(NHibernateHelper.OpenSession()).All().ToList().Select(x => x.SalesPointNumber).Distinct().ToList();
-
             int[,] distanceMatrix = new int[allDistancePoints.Count, allDistancePoints.Count];
 
             for (int i = 0; i < allDistancePoints.Count; i++)
@@ -113,7 +114,7 @@ namespace demo.mdi.ais.ChildForms.Logist
             Route route = new Route();
             route.CarNumber = 5;
             route.RouteNumber = 34;
-            route.CarDepartureDate = new DateTime(2018,5,2);
+            route.CarDepartureDate = new DateTime(2018, 5, 2);
             route.ConversionsNumber = path.Count - 1;
             Repository<Route> routes = new Repository<Route>(NHibernateHelper.OpenSession());
             routes.Add(route);

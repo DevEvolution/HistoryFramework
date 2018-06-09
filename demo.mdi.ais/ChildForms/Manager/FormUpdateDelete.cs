@@ -14,9 +14,6 @@ using System.Windows.Forms;
 
 namespace demo.mdi.ais.ChildForms.Manager
 {
-    //Сделать динамический список
-
-
     public partial class FormUpdateDelete : Form
     {
         private TableAction action;
@@ -57,8 +54,6 @@ namespace demo.mdi.ais.ChildForms.Manager
                         SettingsTableDynamicList list = JsonConvert.DeserializeObject<SettingsTableDynamicList>(Encoding.UTF8.GetString(Properties.Resources.distance_dynamicList));
                         settingsTable.DynamicList = list;
                         list.rows.ForEach(x => dgvData.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = x.name }));
-                        //Repository<DistanceBetweenSalesPoints> distances = new Repository<DistanceBetweenSalesPoints>(NHibernateHelper.OpenSession());
-                        //distances.All().ToList().ForEach(x => dgvData.Rows.Add(x.StartSalesPointNumber, x.EndSalesPointNumber, x.DistrictNumber, x.Distance, x.InformationAboutPath));
                         break;
                     }
                 case TableToChange.District:
@@ -66,11 +61,10 @@ namespace demo.mdi.ais.ChildForms.Manager
                         SettingsTableDynamicList list = JsonConvert.DeserializeObject<SettingsTableDynamicList>(Encoding.UTF8.GetString(Properties.Resources.district_dynamicList));
                         settingsTable.DynamicList = list;
                         list.rows.ForEach(x => dgvData.Columns.Add(new DataGridViewTextBoxColumn() { HeaderText = x.name }));
-                        //Repository<District> districts = new Repository<District>(NHibernateHelper.OpenSession());
-                        //districts.All().ToList().ForEach(x => dgvData.Rows.Add(x.DistrictNumber, x.Name, x.SalesPointCount));
                         break;
                     }
             }
+            Program.Controller.Message("Воспользуйтесь поиском для отображения необходимых данных");
         }
 
         private void FormUpdateDelete_Load(object sender, EventArgs e)
@@ -161,10 +155,8 @@ namespace demo.mdi.ais.ChildForms.Manager
                 case TableToChange.Distance:
                     {
                         int item = dgvData.SelectedCells[0].RowIndex;
-                        //1
                         Repository<DistanceBetweenSalesPoints> repository = new Repository<DistanceBetweenSalesPoints>(NHibernateHelper.OpenSession());
                         DistanceBetweenSalesPoints oldDistance = repository.All().ToList().FirstOrDefault(x => x.StartSalesPointNumber == int.Parse(dgvData[0, item].Value.ToString()) && x.EndSalesPointNumber == int.Parse(dgvData[1, item].Value.ToString()));
-                        //2
                         DistanceBetweenSalesPoints newDistance = new DistanceBetweenSalesPoints()
                         {
                             StartSalesPointNumber = int.Parse(SearchForValue("№ начальной ТТ")),
@@ -173,7 +165,6 @@ namespace demo.mdi.ais.ChildForms.Manager
                             Distance = int.Parse(SearchForValue("Расстояние между ТТ")),
                             InformationAboutPath = SearchForValue("Информация о пути")
                         };
-                        //3
                         repository.Delete(oldDistance);
                         repository.Add(newDistance);
 
@@ -183,17 +174,14 @@ namespace demo.mdi.ais.ChildForms.Manager
                 case TableToChange.District:
                     {
                         int item = dgvData.SelectedCells[0].RowIndex;
-                        //1
                         Repository<District> repository = new Repository<District>(NHibernateHelper.OpenSession());
                         District oldDistrict = repository.All().ToList().FirstOrDefault(x => x.DistrictNumber == int.Parse(dgvData[0, item].Value.ToString()));
-                        //2
                         District newDistrict = new District()
                         {
                             DistrictNumber = int.Parse(SearchForValue("№ Района")),
                             Name = SearchForValue("Название"),
                             SalesPointCount = int.Parse(SearchForValue("Количество обслуживаемых ТТ"))
                         };
-                        //3
                         repository.Delete(oldDistrict);
                         repository.Add(newDistrict);
 
@@ -201,6 +189,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                         break;
                     }
             }
+            Program.Controller.Message("Выбранные записи обновлены");
         }
 
         private void DeleteSelected()
@@ -246,6 +235,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                         break;
                     }
             }
+            Program.Controller.Message("Выбранные записи удалены");
         }
 
         private void dgvData_SelectionChanged(object sender, EventArgs e)
@@ -264,6 +254,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                             settingsTable.Rows[0].Value = districtValue.DistrictNumber.ToString();
                             settingsTable.Rows[1].Value = districtValue.Name;
                             settingsTable.Rows[2].Value = districtValue.SalesPointCount.ToString();
+                            Program.Controller.Message("Обновите данные по выбранному району и нажмите кнопку \"Сохранить\"");
                             break;
                         }
                     case TableToChange.Distance:
@@ -277,6 +268,7 @@ namespace demo.mdi.ais.ChildForms.Manager
                             settingsTable.Rows[2].Value = distanceValue.DistrictNumber.ToString();
                             settingsTable.Rows[3].Value = distanceValue.Distance.ToString();
                             settingsTable.Rows[4].Value = distanceValue.InformationAboutPath;
+                            Program.Controller.Message("Обновите данные по выбранной записи и нажмите кнопку \"Сохранить\"");
                             break;
                         }
                 }
