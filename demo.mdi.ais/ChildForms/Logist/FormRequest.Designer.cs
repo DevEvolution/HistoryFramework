@@ -1,4 +1,4 @@
-﻿namespace demo.mdi.ais.ChildForms.Logist
+﻿namespace DemoProject.ChildForms.Logist
 {
     partial class FormRequest
     {
@@ -207,7 +207,7 @@
             this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculate.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCalculate.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnCalculate.Image = global::demo.mdi.ais.Properties.Resources.strategy;
+            this.btnCalculate.Image = global::DemoProject.Properties.Resources.strategy;
             this.btnCalculate.Location = new System.Drawing.Point(173, 14);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(456, 71);

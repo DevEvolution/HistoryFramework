@@ -1,13 +1,8 @@
-﻿using demo.mdi.ais.Helpers.Enums;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace demo.mdi.ais.Helpers
+namespace DemoProject.Helpers
 {
     class Authorization
     {
@@ -17,7 +12,7 @@ namespace demo.mdi.ais.Helpers
 
         public Authorization()
         {
-            Accounts = JsonConvert.DeserializeObject<List<Account>>(File.ReadAllText("accounts.json"));
+            Accounts = new List<Account>() { new Account() { accountType = Enums.AccountType.Logist, login = "logist", password = "123" } };
         }
 
         public Account Authorize(string login, string password)

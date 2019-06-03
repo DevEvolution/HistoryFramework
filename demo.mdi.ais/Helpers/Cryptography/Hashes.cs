@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace demo.mdi.ais.Helpers.Cryptography
+namespace DemoProject.Helpers.Cryptography
 {
     class Hashes
     {

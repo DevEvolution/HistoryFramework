@@ -121,73 +121,13 @@
   <data name="back64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bar_chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bar-chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bigcat512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bigcat512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="binoculars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\binoculars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="compass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="correctuser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\correctuser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="group64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="handshake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\handshake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="historyFramework" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\historyFramework.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kailogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kailogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="like" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\like.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="list" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="litrum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\litrum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="networking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\networking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="next64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pie_chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pie-chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="registeruser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registeruser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="startup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\startup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="strategy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strategy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xsettings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xsettings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

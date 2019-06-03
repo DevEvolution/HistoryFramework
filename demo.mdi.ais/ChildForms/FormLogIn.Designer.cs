@@ -1,4 +1,4 @@
-﻿namespace demo.mdi.ais.ChildForms
+﻿namespace DemoProject.ChildForms
 {
     partial class FormLogIn
     {
@@ -139,7 +139,7 @@
             this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnLogIn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLogIn.Image = global::demo.mdi.ais.Properties.Resources.correctuser;
+            this.btnLogIn.Image = global::DemoProject.Properties.Resources.correctuser;
             this.btnLogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogIn.Location = new System.Drawing.Point(20, 328);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(20);

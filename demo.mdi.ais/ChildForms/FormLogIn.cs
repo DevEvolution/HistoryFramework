@@ -1,6 +1,5 @@
-﻿using demo.mdi.ais.ChildForms.Logist;
-using demo.mdi.ais.Helpers;
-using Newtonsoft.Json;
+﻿using DemoProject.ChildForms.Logist;
+using DemoProject.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HistoryFramework;
 
-namespace demo.mdi.ais.ChildForms
+namespace DemoProject.ChildForms
 {
     public partial class FormLogIn : Form
     {
+        public HistoryController HistoryController { get; set; }
+
         public FormLogIn()
         {
             InitializeComponent();
@@ -25,11 +27,9 @@ namespace demo.mdi.ais.ChildForms
         {
             Authorization auth = new Authorization();
             Account account = auth.Authorize(tbLogin.Text, tbPassword.Text);
-            if (account == null) Program.Controller.Error("Не удалось авторизоваться");
+            if (account == null) HistoryController.Error("Не удалось авторизоваться");
             else if (account.accountType == Helpers.Enums.AccountType.Logist)
-                Program.Controller.Open(new FormRequest());
-            else if (account.accountType == Helpers.Enums.AccountType.Manager)
-                Program.Controller.Open(new FormManagerAction());
+                HistoryController.Open(new FormRequest() { HistoryController = HistoryController });
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)

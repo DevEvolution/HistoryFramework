@@ -1,4 +1,4 @@
-﻿namespace demo.mdi.ais.ChildForms.Logist
+﻿namespace DemoProject.ChildForms.Logist
 {
     partial class FormCapacity
     {
@@ -151,7 +151,7 @@
             this.btnFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinal.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFinal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFinal.Image = global::demo.mdi.ais.Properties.Resources.computer;
+            this.btnFinal.Image = global::DemoProject.Properties.Resources.computer;
             this.btnFinal.Location = new System.Drawing.Point(122, 0);
             this.btnFinal.Name = "btnFinal";
             this.btnFinal.Size = new System.Drawing.Size(202, 91);

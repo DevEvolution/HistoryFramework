@@ -1,4 +1,4 @@
-﻿namespace demo.mdi.ais.ChildForms.Logist
+﻿namespace DemoProject.ChildForms.Logist
 {
     partial class FormPathfinding
     {
@@ -101,7 +101,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnOK.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnOK.Image = global::demo.mdi.ais.Properties.Resources.like;
+            this.btnOK.Image = global::DemoProject.Properties.Resources.like;
             this.btnOK.Location = new System.Drawing.Point(174, 3);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(227, 77);

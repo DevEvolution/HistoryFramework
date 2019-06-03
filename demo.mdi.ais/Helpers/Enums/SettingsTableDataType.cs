@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace demo.mdi.ais.Helpers.Enums
+namespace DemoProject.Helpers.Enums
 {
     public enum SettingsTableDataType
     {

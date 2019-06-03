@@ -1,11 +1,11 @@
-﻿using demo.mdi.ais.Helpers.Enums;
+﻿using DemoProject.Helpers.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace demo.mdi.ais.Helpers
+namespace DemoProject.Helpers
 {
     public class Account
     {
