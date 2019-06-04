@@ -1,16 +1,24 @@
-﻿using DemoProject.Helpers.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Xml.Serialization;
 
 namespace DemoProject.Helpers
 {
+    /// <summary>
+    /// Account class
+    /// </summary>
+    [Serializable]
     public class Account
     {
+        /// <summary>
+        /// Login
+        /// </summary>
+        [XmlElement("Login")]
         public string login;
+
+        /// <summary>
+        /// Password
+        /// </summary>
+        [XmlElement("Password")]
         public string password;
-        public AccountType accountType;
     }
 }

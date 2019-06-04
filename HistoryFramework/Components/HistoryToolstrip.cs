@@ -10,27 +10,39 @@ using System.Windows.Forms;
 
 namespace HistoryFramework
 {
+    /// <summary>
+    /// History toolstrip control
+    /// </summary>
     public partial class HistoryToolstrip : UserControl
     {
+        /// <summary>
+        /// History controller reference
+        /// </summary>
         public HistoryController HistoryController { get; set; }
 
+        /// <summary>
+        /// Button "Back"
+        /// </summary>
         public ToolStripButton BackButton { get => this.btnBack; }
 
+        /// <summary>
+        /// Button "Next"
+        /// </summary>
         public ToolStripButton NextButton { get => this.btnForward; }
 
+        /// <summary>
+        /// Window article label
+        /// </summary>
         public ToolStripLabel ArticleLabel { get => this.lblFormArticle; }
 
+        /// <summary>
+        /// ToolStrip reference
+        /// </summary>
         public ToolStrip ToolStrip { get => this.toolStrip; }
 
-        #region Events
-
-        public event EventHandler BackButtonClicked;
-
-        public event EventHandler NextButtonClicked;
-
-        #endregion
-
-
+        /// <summary>
+        /// Foreground color
+        /// </summary>
         public Color Foreground
         {
             get => this.toolStrip.ForeColor;
@@ -43,6 +55,9 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Background color
+        /// </summary>
         public Color Background
         {
             get => this.toolStrip.BackColor;
@@ -55,6 +70,9 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Default constructor of <see cref="HistoryToolstrip"/>
+        /// </summary>
         public HistoryToolstrip()
         {
             InitializeComponent();
@@ -63,6 +81,11 @@ namespace HistoryFramework
             btnForward.Click += (o, e) => { HistoryController.Forward(); };
         }
 
+        /// <summary>
+        /// Sets the actual article text and icon
+        /// </summary>
+        /// <param name="article">Actual article text</param>
+        /// <param name="icon">actual article icon</param>
         public void SetArticle(string article, Image icon)
         {
             ArticleLabel.Text = article;

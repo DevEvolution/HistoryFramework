@@ -10,10 +10,20 @@ using System.Windows.Forms;
 
 namespace HistoryFramework
 {
+    /// <summary>
+    /// History controller component
+    /// </summary>
     public partial class HistoryController : Component, IChildWindowController
     {
 
+        /// <summary>
+        /// History toolstrip reference
+        /// </summary>
         private HistoryToolstrip _historyToolstrip;
+
+        /// <summary>
+        /// History toolstrip reference
+        /// </summary>
         public HistoryToolstrip HistoryToolstrip
         {
             get => _historyToolstrip;
@@ -24,7 +34,14 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// History button list reference
+        /// </summary>
         private HistoryButtonList _historyButtonList;
+
+        /// <summary>
+        /// History button list reference
+        /// </summary>
         public HistoryButtonList HistoryButtonList
         {
             get => _historyButtonList;
@@ -35,7 +52,14 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// History status strip reference
+        /// </summary>
         private HistoryStatusStrip _historyStatusStrip;
+
+        /// <summary>
+        /// History status strip reference
+        /// </summary>
         public HistoryStatusStrip HistoryStatusStrip
         {
             get => _historyStatusStrip;
@@ -46,11 +70,17 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Default constructor for <see cref="HistoryController"/>
+        /// </summary>
         public HistoryController()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Default constructor for <see cref="HistoryController"/> including owner container
+        /// </summary>
         public HistoryController(IContainer container)
         {
             container.Add(this);
@@ -58,22 +88,55 @@ namespace HistoryFramework
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// List of all windows that history component references
+        /// </summary>
         protected List<Form> history = new List<Form>();
 
-        protected Form currentForm;
-        protected bool isDialog = false;
-
-        public Form BaseForm { get; set; }
-
+        /// <summary>
+        /// List of all windows that history component references
+        /// </summary>
         public List<Form> History { get => history; }
+
+        /// <summary>
+        /// Currently showed form
+        /// </summary>
+        protected Form currentForm;
+
+        /// <summary>
+        /// Currently showed form
+        /// </summary>
         public Form CurrentForm { get => currentForm; }
 
+        /// <summary>
+        /// Is currently showed form a dialog window
+        /// </summary>
+        protected bool isDialog = false;
+
+        /// <summary>
+        /// MDI Container form reference
+        /// </summary>
+        public Form BaseForm { get; set; }
+
+        /// <summary>
+        /// Check if can go forward in window history
+        /// </summary>
         public bool CanGoForward { get => history.IndexOf(currentForm) < history.Count - 1; }
+
+        /// <summary>
+        /// Check if can go back in window history
+        /// </summary>
         public bool CanGoBack { get => history.IndexOf(currentForm) > 0; }
+
+        /// <summary>
+        /// Currently free id tag
+        /// </summary>
         private int freeId = 1;
 
-
+        /// <summary>
+        /// Opens window with adding it to window history
+        /// </summary>
+        /// <param name="form">Form to open</param>
         public void Open(Form form)
         {
             if (isDialog)
@@ -100,12 +163,20 @@ namespace HistoryFramework
             }
         }
 
+
+        /// <summary>
+        /// Opens window as a dialog and adds it to window history
+        /// </summary>
+        /// <param name="form">Form to open</param>
         public void OpenDialog(Form form)
         {
             this.Open(form);
             isDialog = true;
         }
 
+        /// <summary>
+        /// Step forward in window history
+        /// </summary>
         public void Forward()
         {
             if (CanGoForward)
@@ -121,6 +192,9 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Step back in window history
+        /// </summary>
         public void Back()
         {
             if (CanGoBack)
@@ -150,6 +224,9 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Closes current window and removes it from window history
+        /// </summary>
         public void Close()
         {
             Form formToClose = currentForm;
@@ -164,6 +241,10 @@ namespace HistoryFramework
             HistoryButtonList.HistoryChangedCallback();
         }
 
+        /// <summary>
+        /// Sets form active
+        /// </summary>
+        /// <param name="form">Form to show</param>
         public void SetActiveForm(Form form)
         {
             if (form == currentForm) return;
@@ -189,16 +270,27 @@ namespace HistoryFramework
             }
         }
 
+        /// <summary>
+        /// Prints the error message at status strip
+        /// </summary>
+        /// <param name="message">Message to show</param>
         public void Error(string message)
         {
             HistoryStatusStrip.Error(message);
         }
 
+        /// <summary>
+        /// Prints the message at status strip
+        /// </summary>
+        /// <param name="message">Message to show</param>
         public void Message(string message)
         {
             HistoryStatusStrip.Message(message);
         }
 
+        /// <summary>
+        /// Checks if the buttons are currently available and disables them if not
+        /// </summary>
         private void CheckButtonAvailability()
         {
             if (!CanGoForward)
@@ -212,6 +304,10 @@ namespace HistoryFramework
                 HistoryToolstrip.BackButton.Enabled = true;
         }
 
+        /// <summary>
+        /// Gets unique id tag;
+        /// </summary>
+        /// <returns>Unique tag</returns>
         protected virtual string GetUniqueTag()
         {
             string tag = (freeId++).ToString();

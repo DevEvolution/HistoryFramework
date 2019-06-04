@@ -30,23 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMdiMain));
-            this.historyFrameworkLogo = new System.Windows.Forms.PictureBox();
             this.historyToolstrip = new HistoryFramework.HistoryToolstrip();
-            this.historyStatus = new HistoryFramework.HistoryStatusStrip();
-            this.historyButtonList = new HistoryFramework.HistoryButtonList();
             this.historyController = new HistoryFramework.HistoryController(this.components);
+            this.historyButtonList = new HistoryFramework.HistoryButtonList();
+            this.historyStatus = new HistoryFramework.HistoryStatusStrip();
+            this.historyFrameworkLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.historyFrameworkLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // historyFrameworkLogo
-            // 
-            this.historyFrameworkLogo.Image = global::DemoProject.Properties.Resources.historyFramework;
-            this.historyFrameworkLogo.Location = new System.Drawing.Point(171, 0);
-            this.historyFrameworkLogo.Name = "historyFrameworkLogo";
-            this.historyFrameworkLogo.Size = new System.Drawing.Size(174, 71);
-            this.historyFrameworkLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.historyFrameworkLogo.TabIndex = 4;
-            this.historyFrameworkLogo.TabStop = false;
             // 
             // historyToolstrip
             // 
@@ -60,32 +50,50 @@
             this.historyToolstrip.Size = new System.Drawing.Size(1414, 73);
             this.historyToolstrip.TabIndex = 8;
             // 
-            // historyStatus
-            // 
-            this.historyStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.historyStatus.HistoryController = this.historyController;
-            this.historyStatus.Location = new System.Drawing.Point(0, 705);
-            this.historyStatus.Margin = new System.Windows.Forms.Padding(5);
-            this.historyStatus.Name = "historyStatus";
-            this.historyStatus.Size = new System.Drawing.Size(1414, 43);
-            this.historyStatus.TabIndex = 11;
-            // 
-            // historyButtonList
-            // 
-            this.historyButtonList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.historyButtonList.HistoryController = this.historyController;
-            this.historyButtonList.Location = new System.Drawing.Point(0, 73);
-            this.historyButtonList.Margin = new System.Windows.Forms.Padding(5);
-            this.historyButtonList.Name = "historyButtonList";
-            this.historyButtonList.Size = new System.Drawing.Size(231, 632);
-            this.historyButtonList.TabIndex = 12;
-            // 
             // historyController
             // 
             this.historyController.BaseForm = this;
             this.historyController.HistoryButtonList = this.historyButtonList;
             this.historyController.HistoryStatusStrip = this.historyStatus;
             this.historyController.HistoryToolstrip = this.historyToolstrip;
+            // 
+            // historyButtonList
+            // 
+            this.historyButtonList.Background = System.Drawing.SystemColors.Window;
+            this.historyButtonList.ButtonSize = new System.Drawing.Size(215, 60);
+            this.historyButtonList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.historyButtonList.HighlightedColor = System.Drawing.SystemColors.Highlight;
+            this.historyButtonList.HistoryController = this.historyController;
+            this.historyButtonList.Location = new System.Drawing.Point(0, 73);
+            this.historyButtonList.Margin = new System.Windows.Forms.Padding(5);
+            this.historyButtonList.Name = "historyButtonList";
+            this.historyButtonList.Size = new System.Drawing.Size(231, 632);
+            this.historyButtonList.StaticColor = System.Drawing.SystemColors.ControlText;
+            this.historyButtonList.TabIndex = 12;
+            // 
+            // historyStatus
+            // 
+            this.historyStatus.Background = System.Drawing.Color.White;
+            this.historyStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.historyStatus.ErrorColor = System.Drawing.Color.Red;
+            this.historyStatus.Foreground = System.Drawing.SystemColors.ControlText;
+            this.historyStatus.HistoryController = this.historyController;
+            this.historyStatus.Location = new System.Drawing.Point(0, 705);
+            this.historyStatus.Margin = new System.Windows.Forms.Padding(5);
+            this.historyStatus.MessageColor = System.Drawing.Color.Black;
+            this.historyStatus.Name = "historyStatus";
+            this.historyStatus.Size = new System.Drawing.Size(1414, 43);
+            this.historyStatus.TabIndex = 11;
+            // 
+            // historyFrameworkLogo
+            // 
+            this.historyFrameworkLogo.Image = global::DemoProject.Properties.Resources.historyFramework;
+            this.historyFrameworkLogo.Location = new System.Drawing.Point(171, 0);
+            this.historyFrameworkLogo.Name = "historyFrameworkLogo";
+            this.historyFrameworkLogo.Size = new System.Drawing.Size(174, 71);
+            this.historyFrameworkLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.historyFrameworkLogo.TabIndex = 4;
+            this.historyFrameworkLogo.TabStop = false;
             // 
             // FormMdiMain
             // 

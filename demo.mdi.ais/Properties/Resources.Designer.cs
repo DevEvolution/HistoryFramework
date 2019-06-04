@@ -61,6 +61,15 @@ namespace DemoProject.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream alarm_short {
+            get {
+                return ResourceManager.GetStream("alarm_short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap back64 {
@@ -76,16 +85,6 @@ namespace DemoProject.Properties {
         internal static System.Drawing.Bitmap bar_chart {
             get {
                 object obj = ResourceManager.GetObject("bar_chart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bigcat512 {
-            get {
-                object obj = ResourceManager.GetObject("bigcat512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -171,12 +170,12 @@ namespace DemoProject.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap kailogo {
+        internal static byte[] license {
             get {
-                object obj = ResourceManager.GetObject("kailogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("license", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -196,16 +195,6 @@ namespace DemoProject.Properties {
         internal static System.Drawing.Bitmap list {
             get {
                 object obj = ResourceManager.GetObject("list", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap litrum {
-            get {
-                object obj = ResourceManager.GetObject("litrum", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

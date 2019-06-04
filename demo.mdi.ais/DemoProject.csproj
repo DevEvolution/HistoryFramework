@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>cat.ico</ApplicationIcon>
+    <ApplicationIcon>networking.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,53 +59,69 @@
     <Compile Include="BaseForms\FormMdiMain.Designer.cs">
       <DependentUpon>FormMdiMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\FormActionHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormActionHub.Designer.cs">
+      <DependentUpon>FormActionHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormThirdParty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormThirdParty.Designer.cs">
+      <DependentUpon>FormThirdParty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FormTimerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FormTimerManagement.Designer.cs">
+      <DependentUpon>FormTimerManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\Logist\FormCapacity.cs">
+    <Compile Include="ChildForms\FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\Logist\FormCapacity.Designer.cs">
-      <DependentUpon>FormCapacity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChildForms\Logist\FormPathfinding.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChildForms\Logist\FormPathfinding.Designer.cs">
-      <DependentUpon>FormPathfinding.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChildForms\Logist\FormRequest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChildForms\Logist\FormRequest.Designer.cs">
-      <DependentUpon>FormRequest.cs</DependentUpon>
+    <Compile Include="ChildForms\FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Account.cs" />
+    <Compile Include="Helpers\AccountArray.cs" />
     <Compile Include="Helpers\Authorization.cs" />
-    <Compile Include="Helpers\Cryptography\Hashes.cs" />
-    <Compile Include="Helpers\Enums\AccountType.cs" />
-    <Compile Include="Helpers\Enums\SettingsTableDataType.cs" />
-    <Compile Include="Helpers\Enums\TableAction.cs" />
-    <Compile Include="Helpers\Enums\TableToChange.cs" />
+    <Compile Include="Helpers\TimerHandler.cs" />
+    <Compile Include="Helpers\TimerModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForms\FormMdiMain.resx">
       <DependentUpon>FormMdiMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormActionHub.resx">
+      <DependentUpon>FormActionHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormThirdParty.resx">
+      <DependentUpon>FormThirdParty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FormTimerManagement.resx">
+      <DependentUpon>FormTimerManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\Logist\FormCapacity.resx">
-      <DependentUpon>FormCapacity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\Logist\FormPathfinding.resx">
-      <DependentUpon>FormPathfinding.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\Logist\FormRequest.resx">
-      <DependentUpon>FormRequest.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +133,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="license.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,7 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cat.ico" />
+    <Content Include="networking.ico" />
+    <None Include="Resources\alarm-short.wav" />
     <None Include="Resources\historyFramework.png" />
+    <None Include="Resources\license.pdf" />
     <None Include="Resources\litrum.png" />
     <None Include="Resources\xsettings.ico" />
     <None Include="Resources\user.ico" />
