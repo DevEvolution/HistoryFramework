@@ -55,11 +55,11 @@
     <Compile Include="Components\HistoryController.Designer.cs">
       <DependentUpon>HistoryController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\HistoryStatus.cs">
+    <Compile Include="Components\HistoryStatusStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\HistoryStatus.Designer.cs">
-      <DependentUpon>HistoryStatus.cs</DependentUpon>
+    <Compile Include="Components\HistoryStatusStrip.Designer.cs">
+      <DependentUpon>HistoryStatusStrip.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\HistoryToolstrip.cs">
       <SubType>UserControl</SubType>
@@ -79,8 +79,8 @@
     <EmbeddedResource Include="Components\HistoryButtonList.resx">
       <DependentUpon>HistoryButtonList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Components\HistoryStatus.resx">
-      <DependentUpon>HistoryStatus.cs</DependentUpon>
+    <EmbeddedResource Include="Components\HistoryStatusStrip.resx">
+      <DependentUpon>HistoryStatusStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\HistoryToolstrip.resx">
       <DependentUpon>HistoryToolstrip.cs</DependentUpon>

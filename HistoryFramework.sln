@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoProject", "demo.mdi.ais
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryFramework", "HistoryFramework\HistoryFramework.csproj", "{C1F95438-0BA4-4BD1-A90E-8B280772F971}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC34FE97-128E-4F27-83BD-E9FBEE4F6218}"
+	ProjectSection(SolutionItems) = preProject
+		README-RU.md = README-RU.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
