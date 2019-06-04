@@ -6,8 +6,8 @@
 ![banner](https://i.ibb.co/9YQpcWp/history-Framework.png)
 
 ## Файлы
-[Скачать библиотеку (файл dll)](https://yadi.sk/d/EqfODjkXT8_80w)
-[Скачать демонстрационный проект](https://yadi.sk/d/jAXqKAY4RVf63A)
+ - [Скачать библиотеку (файл dll)](https://yadi.sk/d/EqfODjkXT8_80w)
+ - [Скачать демонстрационный проект](https://yadi.sk/d/jAXqKAY4RVf63A)
 
 ## Демонстрация
 ![Demo](https://i.ibb.co/X7sVmnK/2019-06-04-20-17-28-2.gif)
@@ -27,6 +27,6 @@
 Начать работу можно с добавления на MDI-форму необходимых компонент и указывания им **HistoryController**.
 
 ## Лицензия
-Проект опубликован под лицензией MIT и поставляется как есть, без каких либо гарантий.
+Проект опубликован под лицензией [MIT](LICENSE.md) и поставляется как есть, без каких либо гарантий.
 Все иконки в проекте созданы [Gregor Cresnar](https://www.flaticon.com/authors/gregor-cresnar) с сайта [www.flaticon.com](https://www.flaticon.com/) и используются по лицензии [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/) .
 
